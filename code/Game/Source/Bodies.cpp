@@ -1,7 +1,7 @@
 #include"Bodies.h"
 #include"defs.h"
 
-Bodies::Bodies(double u, double v, double w, double h,int type): x(u),y(v),wid(w),hei(h), type(type) {
+Bodies::Bodies(double u, double v, double w, double h): x(u),y(v),wid(w),hei(h) {
     r = 0;
     g = 0;
     b = 0;
@@ -28,12 +28,12 @@ bool Bodies::check_col(Bodies* B){
 }
 
 void Bodies::display(SDL_Renderer* renderer){
-    SDL_Rect fillRect = {x ,y ,wid,hei};
+    SDL_Rect fillRect = {int(x), int(y), int(wid), int(hei)};
     SDL_SetRenderDrawColor( renderer, r, g, b, o );
     SDL_RenderFillRect( renderer, &fillRect );
 }
 
 void Bodies::move(){
-    if(!(x+vel_x<0 || x+vel_x+wid>WIDTH)) x+=vel_x;
-    if(!(y+vel_y<0 || y+vel_y+hei>HEIGHT)) y+=vel_y;
+    x+=vel_x;
+    y+=vel_y;
 }

@@ -1,5 +1,4 @@
-
-CFLAGS  = -g -Wall
+CFLAGS  = -g -Wall -std=c++11  # Add -std=c++11 here
 SRC = $(wildcard Game/Source/*cpp Render/Source/*cpp) 
 INCS = $(wildcard Game/Include/*h Render/Include/*.h *.h) 
 INCLUDES = -I./Game/Include/ -I./Render/Include/ -I.	
@@ -19,8 +18,6 @@ else
 	SDL_FLAGS = -I/Library/Frameworks/SDL2.framework/Headers/ -F/Library/Frameworks -framework SDL2
 	endif
 endif
-
-
 
 all : run
 

@@ -5,7 +5,7 @@
 
 class Bodies{
     public:
-    Bodies(double u, double v, double w, double h, int type);
+    Bodies(double u, double v, double w, double h);
     bool check_col(Bodies* B);
     void display(SDL_Renderer* renderer);
     void SetColour(int ri, int gi, int bi);
@@ -17,7 +17,6 @@ class Bodies{
     
     private:
     double wid,hei;
-    int type;
     int r,g,b,o;
 };
 

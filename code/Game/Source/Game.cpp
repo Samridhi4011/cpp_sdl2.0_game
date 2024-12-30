@@ -12,12 +12,12 @@ void Game::initialize(){
     while(listOfBodies.size()) listOfBodies.pop_back();
 
     //Add player
-    Bodies* B = new Bodies(WIDTH/2-10,HEIGHT/2-10,20,20,0);
+    Bodies* B = new Bodies(WIDTH/2-10,HEIGHT/2-10,20,20);
     B->SetColour(255,0,0);
     listOfBodies.push_back(B);
 
     // Add one obstacle
-    Bodies* obs = new Bodies(WIDTH/2-50,HEIGHT/2-40,20,20,1);
+    Bodies* obs = new Bodies(WIDTH/2-50,HEIGHT/2-40,20,20);
     obs->SetColour(0,0,0);
     listOfBodies.push_back(obs);
 }
